@@ -8,7 +8,7 @@
 <script>
 import Welcome from '@@/components/welcome'
 import msg from '@/msg'
-import DeepComponent from '@/deeply/nested/component'
+import DeepComponent from '@/another/nested/component'
 export default {
   data(){
     return {

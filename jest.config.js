@@ -26,10 +26,19 @@ function genConfig(localModule){
 module.exports = {
   projects: [
     {
+      displayName: "Core",
+      testMatch: ["<rootDir>/core/**/*.spec.js"],
+      moduleNameMapper: {
+        "^@@/(.*)$": "<rootDir>/core/$1"
+      },
+      ...genConfig()
+    },
+    {
       displayName: "Project 1",
       testMatch: ["<rootDir>/proj1/**/*.spec.js"],
       moduleNameMapper: {
-        "^@/(.*)$": "<rootDir>/proj1/$1"
+        "^@/(.*)$": "<rootDir>/proj1/$1",
+        "^@@/(.*)$": "<rootDir>/core/$1"
       },
       ...genConfig()
     },
@@ -37,7 +46,8 @@ module.exports = {
       displayName: "Project 2",
       testMatch: ["<rootDir>/proj2/**/*.spec.js"],
       moduleNameMapper: {
-        "^@/(.*)$": "<rootDir>/proj2/$1"
+        "^@/(.*)$": "<rootDir>/proj2/$1",
+        "^@@/(.*)$": "<rootDir>/core/$1"
       },
       ...genConfig()
     }

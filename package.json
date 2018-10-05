@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build-proj1": "echo 'proj1 build with @ referencing proj1/'",
+    "build-proj2": "echo 'proj2 build with @ referencing proj2/'"
   },
   "author": "",
   "license": "ISC",
